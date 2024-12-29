@@ -1,0 +1,78 @@
+#about {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8% 5%;
+    background-color: #fff;
+    border-radius: 25% 25% 0 0;
+    margin-bottom: 0;
+}
+
+.logoabout {
+    width: 40%;
+}
+.logoabout img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-shadow: -35px 30px var(--dark-color);
+    margin-left: 30px;
+}
+
+.textabout {
+    width: 40%;
+}
+.textabout h2 {
+    position: relative;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+.textabout h2 span{
+    color: var(--primary-color);
+}
+.textabout h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 19%;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+.textabout p {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .logoabout img {
+        width: 230px;
+        height: auto;
+    }
+    .textabout {
+        width: 50%;
+    }
+    .textabout h2 {
+        font-size: 1.9rem;
+    }
+    .textabout p {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        flex-direction: column;
+    }
+    .logoabout, .textabout {
+        width: 85%;
+    }
+    .logoabout img {
+        width: 200px;
+        margin: 70px 20%;
+    }
+}

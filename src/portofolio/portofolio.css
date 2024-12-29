@@ -1,0 +1,104 @@
+#portofolio {
+    height: auto;
+    padding: 50px 7%;
+    box-sizing: border-box;
+}
+#portofolio h2 {
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 80px;
+}
+#portofolio h2 span {
+    color: var(--primary-color);
+}
+#portofolio h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 8%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+.container-cardfolio {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    position: relative;
+    margin: 0 20px;
+}
+.container-cardfolio img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.4s ease-out;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+.container-cardfolio img:hover {
+    transform: translateY(20px);
+}
+.container-cardfolio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    padding: 0 25px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+.container-cardfolio .overlay a {
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .container-cardfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-cardfolio img {
+        margin-bottom: 30px;
+    }
+    .container-cardfolio .overlay {
+        margin-bottom: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-cardfolio img{
+        width: 100%;
+        height: 200px;
+    }
+    .container-cardfolio .overlay {
+        width: 83%;
+        height: 200px;
+    }
+    .container-cardfolio .overlay a{
+        margin-top: -20px;
+    }
+    #portofolio p {
+        margin-top: 2px;
+        margin-bottom: 15%;
+        line-height: 1;
+    }
+}

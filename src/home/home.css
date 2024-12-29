@@ -1,0 +1,166 @@
+header {
+    width: 100%;
+    height: 91dvh;
+    box-sizing: border-box;
+    padding: 0 9%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.headertext {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h2 {
+    color: var(--primary-color);
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+header h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+header button {
+    display: block;
+    border: none;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    transition: 0.3s ease; 
+}
+header button:hover {
+    background-color: var(--dark-color);  
+    box-shadow: 0 4px 8px var(--dark-color);
+}
+header button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.headerimg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.headerimg img {
+    width: auto;
+    height: 250px;
+    position: absolute;
+    border-radius: 15px;
+    z-index: 2;
+}
+.bulatheader {
+    background-color: var(--primary-color);
+    height: 390px;
+    width: 355px;
+    transform: rotate(41deg);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+#logogame {
+    position: absolute;
+    left: 10px;
+    bottom: 100px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 2rem;
+    margin: 0 5px;
+    background-color: #fff;
+    z-index: 3;
+}
+#logocode {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 2rem;
+    margin: 0 5px;
+    z-index: 3;
+}
+
+.sosial a i {
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 1.32rem;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header h3 {
+        font-size: 1.8rem;
+    }
+    .headerimg img {
+        height: 220px;
+    }
+    .bulatheader {
+        height: 340px;
+        width: 305px;
+    }
+    #logogame {
+        font-size: 1.7rem;
+        bottom: 115px;
+    }
+    #logocode {
+        font-size: 1.7rem;
+        top: 115px;
+    }
+
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+    .headertext {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .headerimg {
+        margin-top: 25%;
+    }
+    header h1 {
+        letter-spacing: -0.6px;
+        font-size: 2.3rem;
+    }
+    header h3 {
+        font-size: 1.7rem;
+    }
+    header button {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    .headerimg img {
+        height: 150px;
+    }
+    .bulatheader {
+        height: 260px;
+        width: 225px;
+    }
+    #logogame {
+        bottom: 25px;
+    }
+    #logocode {
+        top: 25px;
+    }
+}

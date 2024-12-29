@@ -1,0 +1,42 @@
+#content {
+    height: 100%;
+    padding: 50px 85px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#content h2 {
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+}
+#content h2 span{
+    color: var(--primary-color);
+}
+#content h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 5%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.skill-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.skill ul {
+    list-style: none;
+    text-align: left;
+}
+.skill h3 {
+    margin-bottom: 20px;
+}
+.skill ul li {
+    text-align: left;
+    margin-bottom: 7px;
+}
